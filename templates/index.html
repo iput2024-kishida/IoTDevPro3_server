@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block header %}
+<div class="my-2" style="margin-left:40px;">
+  <h3>IoT Device Programming III | Group 3</h3>
+</div>
+<div class="d-flex justify-content-center">
+  <div style="height: 1px; background:black; width:95%;"></div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-2" style="min-height:800px;">
+  ❖ こんにちは、{{ name }}さん。
+  <table class="table mt-1" style="max-width:700px;">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">温度(℃)</th>
+        <th scope="col">湿度(%)</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in range(0,max_value) %}
+      <tr>
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ data_list[i][0] }}</td>
+        <td>{{ data_list[i][1] }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="w-100">
+  Footer
+</div>
+{% endblock %}
