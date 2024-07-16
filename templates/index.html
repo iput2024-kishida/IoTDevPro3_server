@@ -28,8 +28,14 @@
         <td>{{ data_list[i][1] }}</td>
       </tr>
     {% endfor %}
+
     </tbody>
   </table>
+  <div class="mt-3">
+    <h4>平均値</h4>
+    <p>平均温度: {{ avg_temperature }} ℃</p>
+    <p>平均湿度: {{ avg_humidity }} %</p>
+  </div>
 </div>
 {% endblock %}
 
